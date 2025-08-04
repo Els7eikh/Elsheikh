@@ -461,6 +461,8 @@ footer {
     padding: 2rem 0;
     font-size: 0.9rem;
     color: var(--dark-text-color);
+    margin-top: -7rem;
+
 }
 .back-to-top {
     position: fixed;
@@ -510,4 +512,5 @@ footer {
     .hero-section h2 {
         font-size: 1.3rem;
     }
+
 }
