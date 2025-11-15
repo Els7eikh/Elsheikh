@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Elsheikh | Elite Network Security Engineer</title>
+    <title>Ahmed Elsheikh | Network Security Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
@@ -39,7 +39,6 @@
             line-height: 1.6;
         }
 
-        /* Animated Grid Background */
         .grid-bg {
             position: fixed;
             top: 0;
@@ -59,7 +58,6 @@
             100% { transform: translate(50px, 50px); }
         }
 
-        /* Floating Particles */
         .particles {
             position: fixed;
             top: 0;
@@ -97,7 +95,6 @@
             }
         }
 
-        /* Glowing Orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -140,30 +137,6 @@
             66% { transform: translate(-100px, 100px) scale(0.9); }
         }
 
-        /* Cursor Trail */
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-cyan);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.15s ease;
-        }
-
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--accent-cyan);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9998;
-            transition: all 0.15s ease;
-        }
-
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -268,7 +241,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Container */
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -282,7 +254,6 @@
             position: relative;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -337,7 +308,11 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            object-fit: cover;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
             border: 3px solid var(--accent-cyan);
             box-shadow: 0 0 60px rgba(0, 240, 255, 0.4);
             position: relative;
@@ -463,7 +438,6 @@
             color: var(--accent-cyan);
         }
 
-        /* Section Title */
         .section-header {
             text-align: center;
             margin-bottom: 5rem;
@@ -500,7 +474,6 @@
             margin: 0 auto;
         }
 
-        /* Experience Timeline */
         .timeline {
             position: relative;
             max-width: 1000px;
@@ -634,7 +607,6 @@
             }
         }
 
-        /* Cards Grid */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -711,7 +683,6 @@
             line-height: 1.6;
         }
 
-        /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -787,7 +758,6 @@
             font-size: 1.2rem;
         }
 
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -883,31 +853,10 @@
             gap: 1rem;
         }
 
-        /* Contact Section */
         .contact-content {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--text-gray);
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: var(--accent-cyan);
         }
 
         .social-links {
@@ -939,7 +888,6 @@
             box-shadow: 0 10px 30px rgba(0, 240, 255, 0.4);
         }
 
-        /* Footer */
         footer {
             padding: 3rem 0;
             text-align: center;
@@ -947,7 +895,6 @@
             color: var(--text-muted);
         }
 
-        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -979,7 +926,6 @@
             box-shadow: 0 15px 40px rgba(0, 240, 255, 0.6);
         }
 
-        /* Responsive */
         @media (max-width: 968px) {
             .hero h1 {
                 font-size: 3.5rem;
@@ -1054,11 +1000,6 @@
             nav {
                 padding: 0 1.5rem;
             }
-
-            .cursor-dot,
-            .cursor-outline {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -1071,12 +1012,9 @@
 
     <div class="particles" id="particles"></div>
 
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-outline" id="cursorOutline"></div>
-
     <header id="header">
         <nav>
-            <a href="#home" class="logo">Ahmed.dev</a>
+            <a href="#home" class="logo">Ahmed Elsheikh</a>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
@@ -1096,7 +1034,6 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-badge">🚀 Available for Opportunities</div>
                     
                     <div class="profile-wrapper">
                         <img src="profile1.png" alt="Ahmed Elsheikh" class="profile-img">
@@ -1105,8 +1042,7 @@
                     <h1>Ahmed Elsheikh</h1>
                     <div class="hero-subtitle" id="typedText"></div>
                     <p class="hero-description">
-                        Network Security Engineer specializing in cybersecurity solutions. Passionate about protecting digital infrastructures and continuously advancing in the field since 2022.
-                    </p>
+Network Security Engineer passionate about cybersecurity. Started learning in 2022, completed specialized courses, and actively participated in volunteer teams. Continuously expanding knowledge and skills in the field.                    </p>
 
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
@@ -1363,10 +1299,10 @@
                         <a href="https://www.youtube.com/@Els7eikh" target="_blank" class="social-link" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                        <a href="https://github.com/els7eikh" target="_blank" class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="mailto:ahmed@example.com" class="social-link" aria-label="Email">
+                        <a href="mailto:ahmedelsheikh.network@gmail.com" class="social-link" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -1386,21 +1322,9 @@
     </a>
 
     <script>
-        // Custom Cursor
-        const cursorDot = document.getElementById('cursorDot');
-        const cursorOutline = document.getElementById('cursorOutline');
-
-        window.addEventListener('mousemove', (e) => {
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
-            cursorOutline.style.left = e.clientX + 'px';
-            cursorOutline.style.top = e.clientY + 'px';
-        });
-
         // Typing Effect
         const texts = [
-            'Network Security Engineer',
-            'Cybersecurity Specialist',
+            'Junior Network Security Engineer',
             'ALP-24 Alumni',
             'FCIS Student'
         ];
@@ -1523,21 +1447,6 @@
                 heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
                 heroContent.style.opacity = 1 - (scrolled / 600);
             }
-        });
-
-        // Cursor Effect on Hover
-        document.querySelectorAll('a, button, .card, .project-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursorOutline.style.width = '60px';
-                cursorOutline.style.height = '60px';
-                cursorDot.style.transform = 'scale(2)';
-            });
-
-            el.addEventListener('mouseleave', () => {
-                cursorOutline.style.width = '40px';
-                cursorOutline.style.height = '40px';
-                cursorDot.style.transform = 'scale(1)';
-            });
         });
     </script>
 </body>
